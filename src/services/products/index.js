@@ -50,16 +50,16 @@ productsRouter.put("/:id", async (req, res) => {
     res.send(product);
 })
 
-productsRouter.delete("/:id", async (req, res) => {
+// productsRouter.delete("/:id", async (req, res) => {
 
-    const { id } = req.params;
-    const product = await ProductModel.findByIdAndDelete(id);
-    if (!product) {
-        res.status(404).send({ error: "product not found" });
-        return
-    }
-    res.send({ message: "product deleted" });
+//     const { id } = req.params;
+//     const product = await ProductModel.findByIdAndDelete(id);
+//     if (!product) {
+//         res.status(404).send({ error: "product not found" });
+//         return
+//     }
+//     res.send({ message: "product deleted" });
 
-})
+// })
 
 export { productsRouter }
